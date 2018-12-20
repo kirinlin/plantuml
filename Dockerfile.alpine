@@ -1,0 +1,11 @@
+FROM jetty:alpine
+LABEL version="1.2018.13" maintainer="Kirin Lin"
+
+USER root
+RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
+    && apk add --update --no-cache graphviz wqy-zenhei@edge
+
+USER jetty
+
+# plantuml v1.2018.13
+RUN wget http://sourceforge.net/projects/plantuml/files/plantuml.war/download -O /var/lib/jetty/webapps/plantuml.war
