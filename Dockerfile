@@ -1,5 +1,5 @@
-FROM jetty
-LABEL version="1.2019.1" maintainer="Kirin Lin"
+FROM jetty:9.4-jre8
+LABEL version="1.2019.7" maintainer="Kirin Lin"
 
 USER root
 
@@ -9,5 +9,5 @@ RUN apt-get update && \
 
 USER jetty
 
-# plantuml v1.2019.1
+# plantuml v1.2019.7
 RUN wget http://sourceforge.net/projects/plantuml/files/plantuml.war/download -O /var/lib/jetty/webapps/plantuml.war
