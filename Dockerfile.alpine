@@ -1,5 +1,5 @@
 FROM jetty:9.4-jre8-alpine
-LABEL version="1.2019.7" maintainer="Kirin Lin"
+LABEL version="1.2020.15" maintainer="Kirin Lin"
 
 USER root
 RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
@@ -7,5 +7,5 @@ RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/rep
 
 USER jetty
 
-# plantuml v1.2019.7
+# plantuml v1.2020.15
 RUN wget http://sourceforge.net/projects/plantuml/files/plantuml.war/download -O /var/lib/jetty/webapps/plantuml.war
